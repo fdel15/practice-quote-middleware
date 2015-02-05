@@ -1,8 +1,8 @@
 class Quotes
   attr_reader :quotes
 
-  def initialize
-    @quotes = File.foreach("fixtures/rickygervais.txt").map { |line| line.split("\n") }
+  def initialize(textfile)
+    @quotes = File.foreach(textfile).map { |line| line.split("\n") }
   end
 
   def random
